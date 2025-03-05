@@ -1,6 +1,6 @@
 About Me
 
-</h1>Perkenalkan
+</h1>Perpustakaan alya
 
 <h2>Saya Alya Nabilah. Ini adalah hompage pertama saya, karena saya baru belajar tentang cara membuat hompage
 
