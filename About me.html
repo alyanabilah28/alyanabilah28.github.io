@@ -13,6 +13,7 @@
         }
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -50,6 +51,15 @@
         button:hover {
             background: #ff4e7a;
         }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -68,8 +78,8 @@
         </div>
         <div class="slide" id="contact">
             <h1>Contact Us</h1>
-            <p>Email: alyanabilah205@gmail.com</p>
-            <p>Telepon: +62 82163298485</p>
+            <p>Email: alyanabilah@example.com</p>
+            <p>Telepon: +62 812-3456-7890</p>
         </div>
         <div class="nav-buttons">
             <button onclick="showSlide('home')">Home</button>
@@ -77,6 +87,9 @@
             <button onclick="showSlide('contact')">Contact Us</button>
         </div>
     </div>
+    <footer>
+        <p>&copy; 2025 Alya Nabilah. All rights reserved.</p>
+    </footer>
     <script>
         function showSlide(slideId) {
             document.querySelectorAll('.slide').forEach(slide => {
@@ -87,3 +100,4 @@
     </script>
 </body>
 </html>
+
