@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Alya Libs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 40px 0;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff4e7a;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .nav-buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #ff7eb3;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff4e7a;
+            transform: translateY(-3px);
+        }
+        footer {
+            padding: 10px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        .profile {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-color: #ffd0d0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: #ff4e7a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Me</h1>
+        <div class="profile">AN</div>
+        <p>Nama: Alya Nabilah</p>
+        <p>NIM: 220709087</p>
+        <p>Program Studi: Perpustakaan dan Sains Informasi</p>
+        <p>Fakultas: Ilmu Budaya</p>
+        <p>Universitas: Universitas Sumatera Utara</p>
+        
+        <div class="nav-buttons">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='about.html'">About Me</button>
+            <button onclick="location.href='contact.html'">Hubungi Kami</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Alya Nabilah. All rights reserved.</p>
+    </footer>
+</body>
+</html>
