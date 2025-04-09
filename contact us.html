@@ -14,6 +14,7 @@
 
         .container {
             width: 80%;
+            max-width: 600px;
             margin: 20px auto;
             background-color: #fff;
             padding: 20px;
@@ -35,7 +36,7 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Penting agar padding tidak melebihi lebar */
+            box-sizing: border-box;
         }
 
         textarea {
@@ -52,37 +53,3 @@
         }
 
         button:hover {
-            background-color: #45a049;
-        }
-
-        .error {
-            color: red;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>Hubungi Kami</h1>
-        <p>Silakan isi formulir di bawah ini untuk menghubungi kami.</p>
-
-        <form action="#" method="post"> <!-- Ganti '#' dengan URL endpoint yang sesuai -->
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="subject">Subjek:</label>
-            <input type="text" id="subject" name="subject">
-
-            <label for="message">Pesan:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Kirim</button>
-        </form>
-        <h3>Halaman Lain</h3>
-    <a href="index.html">Home</a>
-    </div>
-</body>
-</html>
