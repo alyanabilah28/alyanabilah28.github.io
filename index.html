@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Alya Libs - Homepage</title>
     <style>
         * {
             margin: 0;
@@ -12,25 +12,28 @@
             font-family: Arial, sans-serif;
         }
         body {
-            background: linear-gradient(45deg, #6a11cb, #2575fc);
-            color: white;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            color: #333;
             text-align: center;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow-x: hidden;
         }
         .container {
-            background: rgba(255, 255, 255, 0.1);
+            width: 80%;
+            max-width: 800px;
+            background: white;
             padding: 30px;
             border-radius: 15px;
-            backdrop-filter: blur(10px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         h1 {
             font-size: 36px;
             margin-bottom: 10px;
+            color: #ff4e7a;
         }
         p {
             font-size: 18px;
@@ -38,6 +41,9 @@
         }
         .nav-buttons {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         button {
             padding: 10px 20px;
@@ -52,26 +58,40 @@
         }
         button:hover {
             background: #ff4e7a;
+            transform: translateY(-3px);
         }
         footer {
             margin-top: 20px;
             padding: 10px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.8);
             width: 100%;
             position: absolute;
             bottom: 0;
-            backdrop-filter: blur(5px);
+        }
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ff4e7a;
+        }
+        .tagline {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="logo">Alya Libs</div>
+        <p class="tagline">perpustakaan kecil, ilmu tanpa batas</p>
         <h1>Selamat Datang di Homepage</h1>
-        <p>Jelajahi lebih lanjut tentang saya dan cara menghubungi saya.</p>
+        <p>Perkenalkan, nama saya Alya Nabilah. Jelajahi lebih lanjut tentang saya dan cara menghubungi saya.</p>
         <div class="nav-buttons">
+            <button onclick="location.href='index.html'">Home</button>
             <button onclick="location.href='about.html'">About Me</button>
-            <button onclick="location.href='contact.html'">Contact Us</button>
+            <button onclick="location.href='contact.html'">Hubungi Kami</button>
         </div>
     </div>
     <footer>
@@ -79,8 +99,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
