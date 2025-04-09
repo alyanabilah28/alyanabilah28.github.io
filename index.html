@@ -12,23 +12,22 @@
             font-family: Arial, sans-serif;
         }
         body {
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
-            color: #333;
-            text-align: center;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            overflow-x: hidden;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
         }
         .container {
             width: 80%;
             max-width: 800px;
+            text-align: center;
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 40px 0;
         }
         h1 {
             font-size: 36px;
@@ -38,12 +37,10 @@
         p {
             font-size: 18px;
             margin-bottom: 20px;
+            color: #333;
         }
         .nav-buttons {
             margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
         }
         button {
             padding: 10px 20px;
@@ -61,12 +58,11 @@
             transform: translateY(-3px);
         }
         footer {
-            margin-top: 20px;
             padding: 10px;
             text-align: center;
             background: rgba(255, 255, 255, 0.8);
             width: 100%;
-            position: absolute;
+            position: fixed;
             bottom: 0;
         }
         .logo {
@@ -80,14 +76,30 @@
             color: #666;
             margin-bottom: 30px;
         }
+        .usu-link {
+            margin-top: 20px;
+        }
+        .usu-link a {
+            color: #ff4e7a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .usu-link a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">Alya Libs</div>
         <p class="tagline">perpustakaan kecil, ilmu tanpa batas</p>
-        <h1>Selamat Datang di Homepage</h1>
-        <p>Perkenalkan, nama saya Alya Nabilah. Jelajahi lebih lanjut tentang saya dan cara menghubungi saya.</p>
+        <h1>Selamat Datang</h1>
+        <p>Perkenalkan, nama saya Alya Nabilah. Ini adalah homepage pertama saya, karena saya baru belajar tentang cara membuat homepage. Homepage ini web untuk saya belajar.</p>
+        
+        <div class="usu-link">
+            <p><a href="https://library.usu.ac.id/" target="_blank">Kunjungi Perpustakaan USU</a></p>
+        </div>
+        
         <div class="nav-buttons">
             <button onclick="location.href='index.html'">Home</button>
             <button onclick="location.href='about.html'">About Me</button>
