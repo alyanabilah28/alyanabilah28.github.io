@@ -1,113 +1,318 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alya Libs - Homepage</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alya Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Animation for fade-in */
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
         }
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+      }
+
+      /* Animation for sliding */
+      .slide-in {
+        transform: translateX(100%);
+        animation: slideIn 0.5s ease-out forwards;
+      }
+
+      @keyframes slideIn {
+        to {
+          transform: translateX(0);
         }
-        .container {
-            width: 80%;
-            max-width: 800px;
-            text-align: center;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin: 40px 0;
+      }
+
+      /* Scroll animation */
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: scrollAnim 1s ease-out forwards;
+      }
+
+      @keyframes scrollAnim {
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: #ff4e7a;
-        }
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .nav-buttons {
-            margin-top: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            border: none;
-            background: #ff7eb3;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 5px;
-            transition: 0.3s;
-        }
-        button:hover {
-            background: #ff4e7a;
-            transform: translateY(-3px);
-        }
-        footer {
-            padding: 10px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8);
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-        }
-        .logo {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #ff4e7a;
-        }
-        .tagline {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        .usu-link {
-            margin-top: 20px;
-        }
-        .usu-link a {
-            color: #ff4e7a;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .usu-link a:hover {
-            text-decoration: underline;
-        }
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <div class="logo">Alya Libs</div>
-        <p class="tagline">perpustakaan kecil, ilmu tanpa batas</p>
-        <h1>Selamat Datang</h1>
-        <p>Perkenalkan, nama saya Alya Nabilah. Ini adalah homepage pertama saya, karena saya baru belajar tentang cara membuat homepage. Homepage ini web untuk saya belajar.</p>
-        
-        <div class="usu-link">
-            <p><a href="https://library.usu.ac.id/" target="_blank">Kunjungi Perpustakaan USU</a></p>
+  </head>
+
+  <body
+    class="bg-purple-50 text-purple-900 dark:bg-indigo-950 dark:text-purple-100 transition-colors duration-300"
+  >
+    <div class="min-h-screen flex flex-col">
+      <!-- Navbar -->
+      <header
+        class="sticky top-0 z-50 bg-white dark:bg-gray-700 shadow-sm border-b dark:border-gray-700"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center fade-in"
+        >
+          <span class="text-xl font-bold text-teal-600 dark:text-teal-400"
+            >Alya Library</span
+          >
+          <button
+            id="menu-btn"
+            class="md:hidden text-gray-700 dark:text-gray-200 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+          <nav
+            id="nav-links"
+            class="hidden md:flex gap-6 font-medium text-base"
+          >
+            <a
+              href="index.html"
+              class="hover:text-teal-600 dark:hover:text-teal-300 transition"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-teal-600 dark:hover:text-teal-300 transition"
+              >About</a
+            >
+            <a
+              href="buku.html"
+              class="hover:text-teal-600 dark:hover:text-teal-300 transition"
+              >Book</a
+            >
+            <a
+              href="event.html"
+              class="hover:text-teal-600 dark:hover:text-teal-300 transition"
+              >Event</a
+            >
+            <a
+              href="contack.html"
+              class="hover:text-teal-600 dark:hover:text-teal-300 transition"
+              >Contack</a
+            >
+            <a
+              href="Homework.html"
+              class="hover:text-teal-600 dark:hover:text-teal-300 transition"
+              >Homework</a
+            >
+          </nav>
         </div>
-        
-        <div class="nav-buttons">
-            <button onclick="location.href='index.html'">Home</button>
-            <button onclick="location.href='about.html'">About Me</button>
-            <button onclick="location.href='contact.html'">Hubungi Kami</button>
+        <div
+          id="mobile-nav"
+          class="md:hidden hidden px-6 pb-4 space-y-2 font-medium text-base"
+        >
+          <a
+            href="index.html"
+            class="block hover:text-teal-600 dark:hover:text-teal-300"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block hover:text-teal-600 dark:hover:text-teal-300"
+            >About</a
+          >
+          <a
+            href="buku.html"
+            class="block hover:text-teal-600 dark:hover:text-teal-300"
+            >Book</a
+          >
+          <a
+            href="event.html"
+            class="block hover:text-teal-600 dark:hover:text-teal-300"
+            >Event</a
+          >
+          <a
+            href="contack.html"
+            class="block hover:text-teal-600 dark:hover:text-teal-300"
+            >Contack</a
+          >
+          <a
+            href="Homework.html"
+            class="block hover:text-teal-600 dark:hover:text-teal-300"
+            >Homework</a
+          >
         </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section
+        class="relative w-full bg-cover bg-center bg-no-repeat py-24 px-6 fade-in"
+        style="
+          background-image: url('https://disdikbud.acehtengahkab.go.id/thumbnail/700x0/media/2023.03/clementenimum_lib_praha_atitinari_com1.jpg');
+        "
+      >
+        <!-- Overlay gradient -->
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 dark:from-gray-900/50 dark:to-gray-900/80 z-0"
+        ></div>
+
+        <!-- Konten -->
+        <div class="relative z-10 max-w-4xl mx-auto text-center text-white">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold drop-shadow-lg">
+            Selamat Datang di Perpustakaan Alya
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl drop-shadow-md">
+            Gerbang Anda menuju pengetahuan dan pembelajaran. Jelajahi koleksi
+            kami, acara, dan sumber daya lainnya.
+          </p>
+        </div>
+      </section>
+
+      <!-- Konten Utama -->
+      <section
+        class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto px-6 text-gray-900 dark:text-gray-100"
+      >
+        <div
+          class="bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-10 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="mx-auto mb-6 h-20 w-20 text-indigo-600 dark:text-indigo-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v6l4 2"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 6h18M3 6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6z"
+            />
+          </svg>
+          <h3 class="text-3xl font-bold mb-4 text-center">Buku</h3>
+          <p
+            class="text-center text-gray-600 dark:text-gray-300 leading-relaxed"
+          >
+            Temukan berbagai jenis buku dari beragam genre dan topik menarik.
+          </p>
+          <a
+            href="buku.html"
+            class="inline-block mt-6 mx-auto text-indigo-600 dark:text-indigo-400 font-semibold hover:underline text-center w-full"
+            >Lihat Buku</a
+          >
+        </div>
+
+        <div
+          class="bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-10 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="mx-auto mb-6 h-20 w-20 text-pink-600 dark:text-pink-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2v-5a2 2 0 00-2-2H5a2 2 0 00-2 2v5a2 2 0 002 2z"
+            />
+          </svg>
+          <h3 class="text-3xl font-bold mb-4 text-center">Event</h3>
+          <p
+            class="text-center text-gray-600 dark:text-gray-300 leading-relaxed"
+          >
+            Ikuti berbagai acara dan workshop menarik untuk semua usia.
+          </p>
+          <a
+            href="event.html"
+            class="inline-block mt-6 mx-auto text-pink-600 dark:text-pink-400 font-semibold hover:underline text-center w-full"
+            >Lihat Acara</a
+          >
+        </div>
+
+        <div
+          class="bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-10 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="mx-auto mb-6 h-20 w-20 text-green-600 dark:text-green-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v6l4 2"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 6h18M3 6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6z"
+            />
+          </svg>
+          <h3 class="text-3xl font-bold mb-4 text-center">Homework</h3>
+          <p
+            class="text-center text-gray-600 dark:text-gray-300 leading-relaxed"
+          >
+            Akses berbagai materi dan sumber daya untuk membantu menyelesaikan
+            tugas sekolah Anda.
+          </p>
+          <a
+            href="homework.html"
+            class="inline-block mt-6 mx-auto text-green-600 dark:text-green-400 font-semibold hover:underline text-center w-full"
+            >Lihat Tugas</a
+          >
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer
+        class="bg-teal-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 py-4 mt-8"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-xs text-center md:text-left">
+            &copy; Alya Library. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
-    <footer>
-        <p>&copy; 2025 Alya Nabilah. All rights reserved.</p>
-    </footer>
-</body>
+
+    <!-- Theme Toggle & Mobile Menu -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      menuBtn.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
